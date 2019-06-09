@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
-import {fetchRepositories} from '../actions'
+import {fetchRepositories, fetchOrganisations} from '../actions'
 import _ from 'lodash'
 
 class Search extends Component {
@@ -19,6 +19,7 @@ class Search extends Component {
 
     this.state.searchTimeout = setTimeout(() => {
       this.props.fetchRepositories(this.state.searchValue)
+      this.props.fetchOrganisations(this.state.searchValue)
     }, this.state.searchTimeoutInterval)
   };
 
@@ -40,4 +41,4 @@ const mapStateToProps = ({repositories}) => ({
   repositories
 })
 
-export default connect(mapStateToProps, {fetchRepositories})(Search)
+export default connect(mapStateToProps, {fetchRepositories, fetchOrganisations})(Search)

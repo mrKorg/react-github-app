@@ -3,6 +3,7 @@ import Header from '../components/Header'
 import Search from '../components/Search'
 import Repositories from '../components/Repositories'
 import Users from '../components/Users'
+import Organisations from '../components/Organisations'
 
 class App extends Component {
   render () {
@@ -12,6 +13,7 @@ class App extends Component {
         <section className='grid'>
           <div className='grid__aside'>
             <Search />
+            <Organisations />
             <Users />
           </div>
           <div className='grid__main'>
