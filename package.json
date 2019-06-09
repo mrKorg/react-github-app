@@ -1,0 +1,51 @@
+{
+  "name": "react-github-app",
+  "version": "1.0.0",
+  "description": "React github test task by Requestum",
+  "main": "src/index.js",
+  "repository": "https://github.com/mrKorg/react-github-app",
+  "author": "Requestun",
+  "license": "ISC",
+  "standard": {
+    "parser": "babel-eslint",
+    "globals": [
+      "fetch"
+    ]
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.1",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-1": "^6.24.1",
+    "css-loader": "^2.1.1",
+    "file-loader": "^1.1.11",
+    "html-webpack-plugin": "^3.0.6",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.6",
+    "standard": "^11.0.0",
+    "style-loader": "^0.20.2",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^3.3.3",
+    "webpack-dev-server": "^3.1.0"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "lodash": "^4.17.4",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-redux": "^5.0.3",
+    "redux": "^3.0.4",
+    "redux-thunk": "^2.3.0",
+    "reset-css": "^4.0.1"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --mode development --open",
+    "watch": "npm run start -- --watch",
+    "lint": "standard",
+    "build": "webpack --mode production"
+  }
+}

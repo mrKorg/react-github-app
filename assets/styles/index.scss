@@ -1,0 +1,173 @@
+// Colors
+$color-gold: #fff3c9;
+$color-white: white;
+$color-red: #FF483F;
+
+// Basic
+html {
+  height: 100% !important;
+  overflow-y: scroll;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: left;
+  color: #000;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #3a4047;
+}
+
+// Style
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px 100px;
+  min-height: 100vh;
+  position: relative;
+}
+
+.header {
+  padding: 25px 0;
+  color: $color-gold;
+  border-bottom: 1px solid rgba($color-gold, .5);
+
+  @media (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    @media (max-width: 767px) {
+      margin-bottom: 15px;
+    }
+
+    svg {
+      display: block;
+      max-width: 100%;
+
+      @media (max-width: 767px) {
+        margin: 0 auto;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 16px;
+    letter-spacing: 1px;
+
+    @media (max-width: 767px) {
+      text-align: center;
+    }
+  }
+}
+
+.grid {
+  display: grid;
+  grid-gap: 30px;
+  padding: 25px 0;
+
+  @media (min-width: 768px) {
+    grid-template-columns: 300px auto;
+  }
+}
+
+.search {
+  &__input {
+    display: block;
+    width: 100%;
+    padding: 0 15px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+  }
+}
+
+.repositories {
+  &__list {
+    display: grid;
+    grid-gap: 20px;
+
+    @media (min-width: 544px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+.repository {
+  background: $color-white;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+
+  &__title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  &__info {
+    font-size: 12px;
+
+    & > div {
+      & + div {
+        margin-top: 10px;
+      }
+    }
+
+    strong {
+      font-weight: 600;
+    }
+  }
+}
+
+.users {
+  padding: 25px 0;
+
+  &__title {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: $color-white;
+    letter-spacing: 1px;
+  }
+
+  &__list {
+    list-style: none;
+
+    &.is-full {
+      &::after {
+        content: '...';
+        color: $color-white;
+      }
+    }
+  }
+}
+
+.user {
+  &.is-exist {
+    color: $color-white;
+  }
+  &.is-not-exist {
+    color: $color-red;
+  }
+}
+
+.footer {
+  padding: 25px 0;
+  text-align: center;
+  color: $color-gold;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-top: 1px solid rgba($color-gold, .5);
+}
